@@ -1,0 +1,45 @@
+{
+  "asset": {
+    "version": "0.0"
+  },
+  "properties": {
+    "市町村コード": {
+      "minimum": 220,
+      "maximum": 220
+    },
+    "調査ID": {
+      "minimum": 1281,
+      "maximum": 63578
+    },
+    "階数（地上）": {
+      "minimum": 1,
+      "maximum": 4
+    },
+    "敷地面積（50㎡単位）": {
+      "minimum": 50,
+      "maximum": 24300
+    },
+    "建築面積（50㎡単位）": {
+      "minimum": 0,
+      "maximum": 11350
+    }
+  },
+  "geometricError": 99,
+  "root": {
+    "refine": "ADD",
+    "boundingVolume": {
+      "region": [
+        2.279181836948095,
+        0.5898701942951424,
+        2.279290920026345,
+        0.5898996570999628,
+        -201.35537239286086,
+        221.34834921253056
+      ]
+    },
+    "geometricError": 0,
+    "content": {
+      "url": "full.b3dm"
+    }
+  }
+}
