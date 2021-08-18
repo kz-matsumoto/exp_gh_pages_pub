@@ -1,0 +1,104 @@
+https://gis-oer.github.io/gitbook/book/materials/web_gis/Cesium/Cesium.html
+https://gis-oer.github.io/gitbook/book/materials/web_gis/Cesium/Cesium.html#kml%E3%81%AE%E4%BD%9C%E6%88%90%E3%81%A8%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BF
+
+・画像が荒い、説明不足等などで「KMLを書き換える」部分が一部不明
+　そこで、わかった範囲を下記にメモ
+
+
+【１】<BalloonStyle> で括られた部分（<BalloonStyle>タグも含め）は削除するみたい
+
+
+
+【２】属性情報の書き換えは <ExtendedData> タグで括られた部分（下記■）を変更 <description> タグで括られた部分（下記●）のように変更
+
+
+			<Placemark>
+				<name>国高さくら公園</name>
+				<description>全災害時
+					国高さくら公園
+					屋外
+					国高一丁目8-1
+				</description>
+				<styleUrl>#pointStyleMap1
+				</styleUrl>
+			■	<ExtendedData>
+			■		<SchemaData schemaUrl="#S_refuge_first_stage__SSSSI">
+			■			<SimpleData name="SAFIELD003">全災害時</SimpleData>
+			■			<SimpleData name="SAFIELD004">国高さくら公園</SimpleData>
+			■			<SimpleData name="SAFIELD005">屋外</SimpleData>
+			■			<SimpleData name="SAFIELD006">国高一丁目8-1</SimpleData>
+			■			<SimpleData name="test">10</SimpleData>
+			■		</SchemaData>
+			■	</ExtendedData>
+				<Point>
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>136.1855471159321,35.90959531846963,500.1826</coordinates>
+				</Point>
+			</
+
+
+
+
+			<Placemark>
+				<name>アスピカホール国高 駐車場</name>
+			●	<description><![CDATA[避難種類：全災害時<br>
+			●		施設名称：アスピカホール国高 駐車場<br>
+			●		施設環境：屋外<br>
+			●		住所：押田二丁目１-１５<br><br>
+			●		<img src="http://sagara1020.github.io/echizen/echizen_hinanjo_hanrei.png"/><br>
+			●		詳しい防災情報はこちらから<br>
+			●		<a href="http://www.city.echizen.lg.jp/office/010/060/haza-do.html">http://www.city.echizen.lg.jp/office/010/060/haza-do.html</a>]]>
+			●	</description>
+				<styleUrl>#pointStyleMap0</styleUrl>
+				<Point>
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>136.1883502987388,35.90753167165541,500.1826</coordinates>
+				</Point>
+			</Placemark>Placemark>
+
+
+
+
+
+【３】<Style id="inline"> で括られた部分（下記▼）は必要なさそう
+
+
+			<Placemark>
+				<styleUrl>#pointStyleMap</styleUrl>
+			▼	<Style id="inline">
+			▼		<IconStyle>
+			▼			<color>ff0000ff</color>
+			▼			<colorMode>normal</colorMode>
+			▼			<Icon>
+			▼				<href>http://maps.google.com/mapfiles/kml/shapes/shaded_dot.png</href>
+			▼			</Icon>
+			▼		</IconStyle>
+			▼		<LineStyle>
+			▼			<color>ff0000ff</color>
+			▼			<colorMode>normal</colorMode>
+			▼		</LineStyle>
+			▼		<PolyStyle>
+			▼			<color>ff0000ff</color>
+			▼			<colorMode>normal</colorMode>
+			▼		</PolyStyle>
+			▼	</Style>
+			■	<ExtendedData>
+			■		<SchemaData schemaUrl="#S_refuge_first_stage__SSSSI">
+			■			<SimpleData name="SAFIELD003">全災害時</SimpleData>
+			■			<SimpleData name="SAFIELD004">国高フラワー公園</SimpleData>
+			■			<SimpleData name="SAFIELD005">屋外</SimpleData>
+			■			<SimpleData name="SAFIELD006">国高二丁目</SimpleData>
+			■			<SimpleData name="test">10</SimpleData>
+			■		</SchemaData>
+			■	</ExtendedData>
+				<Point>
+					<extrude>1</extrude>
+					<altitudeMode>relativeToGround</altitudeMode>
+					<coordinates>136.1877464493184,35.91192410641832,500.1826</coordinates>
+				</Point>
+			</Placemark>
+
+
+
