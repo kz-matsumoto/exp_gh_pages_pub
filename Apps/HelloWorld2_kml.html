@@ -29,6 +29,7 @@
     <div id="cesiumContainer"></div>
     <script>
       var viewer = new Cesium.Viewer("cesiumContainer");
+        viewer.dataSources.add(Cesium.KmlDataSource.load("./KML/echizen_map.kmz"));
 		var tileset1 = new Cesium.Cesium3DTileset({ url: './data/tileset.json'});
 		tileset1.readyPromise.then(function(tileset1) {
 			viewer.scene.primitives.add(tileset1);
@@ -48,7 +49,6 @@
 		}).otherwise(function(error) {
 			console.log(error);
 		});
-        viewer.dataSources.add(Cesium.KmlDataSource.load("./KML/echizen_map.kmz"));
     </script>
   </body>
 </html>
