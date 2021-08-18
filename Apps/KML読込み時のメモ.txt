@@ -35,7 +35,7 @@ https://gis-oer.github.io/gitbook/book/materials/web_gis/Cesium/Cesium.html#kml%
 					<altitudeMode>relativeToGround</altitudeMode>
 					<coordinates>136.1855471159321,35.90959531846963,500.1826</coordinates>
 				</Point>
-			</
+			</Placemark>
 
 
 
@@ -56,8 +56,7 @@ https://gis-oer.github.io/gitbook/book/materials/web_gis/Cesium/Cesium.html#kml%
 					<altitudeMode>relativeToGround</altitudeMode>
 					<coordinates>136.1883502987388,35.90753167165541,500.1826</coordinates>
 				</Point>
-			</Placemark>Placemark>
-
+			</Placemark>
 
 
 
