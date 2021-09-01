@@ -41,12 +41,18 @@
 			viewer.scene.primitives.add(tileset1);
 
 			tileset1.style = new Cesium.Cesium3DTileStyle({
-				color: 'rgb(127, 127, 255)',
+				color: 'rgb(0, 0, 255)',
 				markerSymbol: '?',
+				heightOffset: '2.0'
 			});
 
-			tileset1.style.heightOffset = '2.0';
+			<!-- tileset1.style.heightOffset = '2.0'; -->
 
+			tileset1.style.verticalOrigin = {
+				evaluate : function(feature) {
+					return VerticalOrigin.CENTER;
+				}
+			};
 
 			viewer.zoomTo(tileset1, new Cesium.HeadingPitchRange(1, -1, 1));
 
