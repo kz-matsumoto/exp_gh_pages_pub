@@ -41,12 +41,12 @@
 			viewer.scene.primitives.add(tileset1);
 
 			tileset1.style = new Cesium.Cesium3DTileStyle({
-				color: 'rgb(0, 127, 0)',
+				color: 'rgb(127, 127, 255)',
 				markerSymbol: '?',
-				'properties' : {
-					'_z' : {'byteOffset' : 0}
-				}
 			});
+
+			tileset1.style.heightOffset = '2.0';
+
 
 			viewer.zoomTo(tileset1, new Cesium.HeadingPitchRange(1, -1, 1));
 
@@ -75,6 +75,13 @@
 					}
 				}
 
+
+
+
+
+				'properties' : {
+					'_z' : {'byteOffset' : 0}
+				}
 
 -->
 
