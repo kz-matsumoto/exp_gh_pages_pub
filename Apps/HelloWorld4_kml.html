@@ -41,13 +41,10 @@
 			viewer.scene.primitives.add(tileset1);
 
 			tileset1.style = new Cesium.Cesium3DTileStyle({
-				color: 'rgb(255, 255, 127)',
+				color: 'rgb(0, 127, 0)',
 				markerSymbol: '?',
-				"properties" : {
-					"_z" : {
-						"minimum" : 0,
-						"maximum" : 0
-					}
+				'properties' : {
+					'_z' : {'byteOffset' : 0}
 				}
 			});
 
