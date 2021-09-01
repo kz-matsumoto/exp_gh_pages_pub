@@ -44,10 +44,13 @@
 				color: 'rgb(255, 0, 255)',
 				markerSymbol: '?',
 				defines : {
-					"_z" : {
-						"minimum" : 0,
-						"maximum" : 0
-					}}
+					"properties" : {
+						"_z" : {
+							"minimum" : 0,
+							"maximum" : 0
+						}
+					}
+				}
 			});
 
 			viewer.zoomTo(tileset1, new Cesium.HeadingPitchRange(1, -1, 1));
