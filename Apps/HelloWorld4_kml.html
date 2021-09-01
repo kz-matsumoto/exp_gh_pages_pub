@@ -38,21 +38,23 @@
 
 		tileset1.readyPromise.then(function(tileset1) {
 
-			viewer.scene.primitives.add(tileset1);
+			viewer.scene.primitives.add(tileset1({
+				HeightReference: Cesium.HeightReference.RELATIVE_TO_GROUND
+			});
 
 			tileset1.style = new Cesium.Cesium3DTileStyle({
-				color: 'rgb(0, 0, 255)',
+				color: 'rgb(0, 0, 127)',
 				markerSymbol: '?',
-				heightOffset: '2.0'
+<!-- 			heightOffset: '2.0'	 -->
 			});
 
 			<!-- tileset1.style.heightOffset = '2.0'; -->
 
-			tileset1.style.verticalOrigin = {
-				evaluate : function(feature) {
-					return VerticalOrigin.CENTER;
-				}
-			};
+<!-- 			tileset1.style.verticalOrigin = {	 -->
+<!-- 				evaluate : function(feature) {	 -->
+<!-- 					return VerticalOrigin.CENTER;	 -->
+<!-- 				}	 -->
+<!-- 			};	 -->
 
 			viewer.zoomTo(tileset1, new Cesium.HeadingPitchRange(1, -1, 1));
 
