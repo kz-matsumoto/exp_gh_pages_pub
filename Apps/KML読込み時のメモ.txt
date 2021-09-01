@@ -9,7 +9,7 @@ https://gis-oer.github.io/gitbook/book/materials/web_gis/Cesium/Cesium.html#kml%
 
 
 
-【２】属性情報の書き換えは <ExtendedData> タグで括られた部分（下記■）を変更 <description> タグで括られた部分（下記●）のように変更
+【２】属性情報の書き換えは <ExtendedData> タグで括られた部分（下記■）を <description> タグで括られた部分（下記●）のように変更
 
 
 			<Placemark>
